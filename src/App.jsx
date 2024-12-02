@@ -38,13 +38,13 @@ function App() {
   }
 
   const getOnibus = async()=>{
-    const getterOnibus = await api.get("http://localhost:8080/onibus/getonibus");
+    const getterOnibus = await api.get("https://mapbus.azurewebsites.net/onibus/getonibus");
     console.log(getterOnibus.data)
     setDados(getterOnibus.data)
   }
 
   const deleteOnibus = async(id)=>{
-    await api.delete("http://localhost:8080/onibus/deleteonibus/"+id);
+    await api.delete("https://mapbus.azurewebsites.net/onibus/deleteonibus/"+id);
     getOnibus()
   }
   const CollectOneRegister = async(id)=>{
@@ -63,7 +63,7 @@ function App() {
   const putOnibus = async(id)=>{
     try{
       envButton.current.style.disabled= true; 
-    await api.put("http://localhost:8080/onibus/putonibus/" + id,{
+    await api.put("https://mapbus.azurewebsites.net/onibus/putonibus/" + id,{
       
         "marca": marca,
         "cor": cor,
@@ -93,7 +93,7 @@ function App() {
     e.preventDefault();
     try{
       envButton.current.style.disabled= true; 
-    await api.post("http://localhost:8080/onibus/postonibus",{
+    await api.post("https://mapbus.azurewebsites.net/onibus/postonibus",{
       
         "marca": marca,
         "cor": cor,
