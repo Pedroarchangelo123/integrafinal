@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+header{
+    box-sizing: 0;
+    align-items: center;
+    padding-top: 30px;
+    height: 100px;
+    width: 100%;
+    background-color: #10B981;
+    color: rgb(255, 255, 255);
+}
